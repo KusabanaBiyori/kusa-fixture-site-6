@@ -7,3 +7,5 @@ for public repositories, and the platform's "this branch requires a review"
 refusal can only be measured against a real ruleset.
 
 Not a customer site. The content is placeholder text.
+
+Connected to KusaBuilder on 2026-10-31 to test a repository ruleset that requires a review.
