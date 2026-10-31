@@ -1,4 +1,4 @@
 {
-  "title": "Kusa fixture site six, built with small studios",
+  "title": "Kusa fixture site six, ruleset check 2026-10-31",
   "body": "The SECOND managed site in the Phase 3 live matrix. Its content differs from kusa-fixture-site deliberately: two fixtures that said the same thing would let a run reading the wrong one produce the expected diff and pass. Deployment probe 2026-08-09: kusa-fixture-platform-lane."
 }
