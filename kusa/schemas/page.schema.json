@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kusabuilder.dev/fixtures/page.schema.json",
+  "title": "Fixture page",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["title", "body"],
+  "properties": {
+    "title": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "body": { "type": "string", "minLength": 1, "maxLength": 4000 },
+    "heroImage": { "type": "string", "pattern": "^/assets/[A-Za-z0-9._-]+$" }
+  }
+}

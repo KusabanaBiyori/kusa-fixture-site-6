@@ -1,0 +1,28 @@
+name: contract
+
+# The second gate. KusaBuilder validates a change before it writes a branch;
+# this validates the result again in the repository's own CI, so a rule the
+# platform ever loosened would still be enforced here (ADR 0004 decision 7).
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    # The check run name the platform requires before a preview can be
+    # published (KusaBuilder ADR 0005 point 19): the build output is scanned
+    # here because this is the only place that ever holds out/.
+    name: kusa:output-scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm run kusa:validate
+      - run: npm run build
+      # Re-run after the build: the output scan is the half that a source-only
+      # check cannot do.
+      - run: npm run kusa:validate

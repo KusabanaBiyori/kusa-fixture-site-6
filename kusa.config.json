@@ -1,0 +1,15 @@
+{
+  "$schema": "https://kusabuilder.dev/schemas/kusa.config.schema.json",
+  "schemaVersion": 1,
+  "framework": "nextjs-static-export",
+  "productionBranch": "main",
+  "buildCommand": "npm run build",
+  "outputDirectory": "out",
+  "contentRoots": ["content"],
+  "contentSchemas": ["kusa/schemas/page.schema.json"],
+  "allowedContentExtensions": [".json", ".md", ".yaml", ".yml"],
+  "assetRoots": ["public/assets"],
+  "allowedAssetExtensions": [".avif", ".gif", ".jpg", ".png", ".svg", ".webp"],
+  "maxAssetBytes": 26214400,
+  "validationCommand": "npm run kusa:validate"
+}
